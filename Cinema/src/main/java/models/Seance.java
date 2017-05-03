@@ -1,5 +1,7 @@
 package models;
 
+import java.time.LocalDate;
+
 /**
  * 03.05.2017
  * Seance
@@ -9,26 +11,24 @@ package models;
  */
 public class Seance {
     private int id;
-    Hall hall;
+    private Hall hall;
     private int price;
-    private int time;
-    Film film;
+    private LocalDate time;
+    private Film film;
 
     public Seance() {
         this.id = 0;
         this.hall = null;
         this.price = 0;
-        this.time = 0;
+        this.time = null;
         this.film = null;
     }
 
-    public Seance(int id, Hall hall, int price, int time, Film film) {
+    public Seance(int id, Hall hall, int price, LocalDate time, Film film) {
         this.id = id;
         this.hall = hall;
         this.price = price;
-        if (time >= 0 && time <= 24) {
-            this.time = time;
-        }
+        this.time = time;
         this.film = film;
     }
 
@@ -56,11 +56,11 @@ public class Seance {
         this.price = price;
     }
 
-    public int getTime() {
+    public LocalDate getTime() {
         return time;
     }
 
-    public void setTime(int time) {
+    public void setTime(LocalDate time) {
         this.time = time;
     }
 
@@ -74,12 +74,12 @@ public class Seance {
 
     @Override
     public boolean equals(Object o) {
-       if (o instanceof Seance && o != null){
+       if (o != null && o instanceof Seance){
            Seance that = (Seance)o;
            return this.id == that.id
                    && this.hall.equals(that.hall)
                    && this.price == that.price
-                   && this.time == that.time
+                   && this.time.equals(that.time)
                    && this.film.equals(that.film);
        } else return false;
     }
