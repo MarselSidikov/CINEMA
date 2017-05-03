@@ -1,10 +1,12 @@
+package service;
+
 import models.*;
 
 import java.util.List;
 
 /**
  * 03.05.2017
- * CinemaService
+ * service.CinemaService
  *
  * @author Guzel
  * @version v1.0
