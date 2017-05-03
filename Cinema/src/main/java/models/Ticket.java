@@ -1,27 +1,28 @@
 package models;
 
-import com.sun.xml.internal.bind.v2.model.core.ID;
+import java.util.List;
 
 /**
  * 03.05.2017
  * Ticket
  *
- * @author Sidikov Marsel (First Software Engineering Platform)
+ * @author Maxim Marshalov (ITIS)
  * @version v1.0
  */
 public class Ticket {
-     private int id;
-     private User user;
+    private int id;
+    private User user;
     private Seance seance;
-    private int place;
+    private List<Place> places;
 
-    public Ticket(){}
+    public Ticket() {
+    }
 
-    public Ticket(int id, User user, Seance seance, int place) {
+    public Ticket(int id, User user, Seance seance, List<Place> places) {
         this.id = id;
         this.user = user;
         this.seance = seance;
-        this.place = place;
+        this.places = places;
     }
 
     public int getId() {
@@ -48,21 +49,22 @@ public class Ticket {
         this.seance = seance;
     }
 
-    public int getPlace() {
-        return place;
+    public List<Place> getPlaces() {
+        return places;
     }
 
-    public void setPlace(int place) {
-        this.place = place;
+    public void setPlaces(List<Place> places) {
+        this.places = places;
     }
+
+    // TODO: equals done
 
     public String toString() {
         return "Ticket{" +
                 "id:" + id +
                 ", user:" + user +
                 ", seance:" + seance +
-                ", place:" + place +
+                ", place:" + places +
                 '}';
     }
-   
 }

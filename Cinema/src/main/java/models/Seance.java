@@ -6,7 +6,7 @@ import java.time.LocalDate;
  * 03.05.2017
  * Seance
  *
- * @author Sidikov Marsel (First Software Engineering Platform)
+ * @author Ruslan Korchenov (ITIS)
  * @version v1.0
  */
 public class Seance {
@@ -74,14 +74,15 @@ public class Seance {
 
     @Override
     public boolean equals(Object o) {
-       if (o != null && o instanceof Seance){
-           Seance that = (Seance)o;
-           return this.id == that.id
-                   && this.hall.equals(that.hall)
-                   && this.price == that.price
-                   && this.time.equals(that.time)
-                   && this.film.equals(that.film);
-       } else return false;
+        // TODO: as User
+        if (o != null && o instanceof Seance) {
+            Seance that = (Seance) o;
+            return this.id == that.id
+                    && this.hall.equals(that.hall)
+                    && this.price == that.price
+                    && this.time.equals(that.time)
+                    && this.film.equals(that.film);
+        } else return false;
     }
 
     @Override

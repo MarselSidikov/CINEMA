@@ -1,38 +1,56 @@
 package models;
 
-public class Hall {
-    private int HallId;
-    private String name;
-    private int HallPlacesNum[];
+import java.util.List;
 
-    public Hall(String name, int HallPlaces) {
-        this.name = name;
-        this.HallPlacesNum = HallPlacesNum;
+/**
+ * 03.05.2017
+ * Film
+ *
+ * @author Karim Ahmetshin (ITIS)
+ * @version v1.0
+ */
+public class Hall {
+    private int id;
+    private Cinema cinema;
+    private List<Place> places;
+
+    public Hall() {
     }
-    public Hall(int HallId, String name, int hallPlacesNum) {
-        this(name, hallPlacesNum);
-        this.HallId = HallId;
+
+    public Hall(int id, Cinema cinema, List<Place> places) {
+        this.id = id;
+        this.cinema = cinema;
+        this.places = places;
     }
-    public int getHallId(){
-        return HallId;
+
+    public int getId() {
+        return id;
     }
-    public void setHallId(int hallId){
-        this.HallId = hallId;
+
+    public void setId(int id) {
+        this.id = id;
     }
-    public String getName(){
-        return name;
+
+    public Cinema getCinema() {
+        return cinema;
     }
-    public void setName(String name){
-        this.name = name;
+
+    public void setCinema(Cinema cinema) {
+        this.cinema = cinema;
     }
-    public int getHallPlacesNum(){
-        return HallPlacesNum[getHallPlacesNum()];
+
+    public List<Place> getPlaces() {
+        return places;
     }
-    public void setHallPlacesNum(int hallPlacesNum[]){
-        this.HallPlacesNum = hallPlacesNum;
+
+    public void setPlaces(List<Place> places) {
+        this.places = places;
     }
+
     @Override
-    public String toString(){
-        return HallId + " " + this.name + " " + this.HallPlacesNum;
+    public String toString() {
+        return id + " " + this.cinema + " " + this.places;
     }
+
+    // TODO: equals
 }
