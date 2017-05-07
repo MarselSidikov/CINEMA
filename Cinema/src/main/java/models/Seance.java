@@ -74,15 +74,18 @@ public class Seance {
 
     @Override
     public boolean equals(Object o) {
-        // TODO: as User
-        if (o != null && o instanceof Seance) {
+        if (this == o) {
+            return true;
+        } else if (o == null || !(o instanceof User)) {
+            return false;
+        } else {
             Seance that = (Seance) o;
             return this.id == that.id
                     && this.hall.equals(that.hall)
                     && this.price == that.price
                     && this.time.equals(that.time)
                     && this.film.equals(that.film);
-        } else return false;
+        }
     }
 
     @Override
