@@ -18,6 +18,12 @@ public class Cinema {
     private List<Hall> halls;
 
     public Cinema() {
+        this.id = 0;
+        this.name = null;
+        this.location = null;
+        this.countSits = 0;
+        this.seances = null;
+        this.seances = null;
     }
 
     public Cinema(int id, String name, String location, int countSits, List<Seance> seances, List<Hall> halls) {
@@ -80,15 +86,23 @@ public class Cinema {
     @Override
     public String toString() {
         // TODO: done
-        return  id + " " + this.name + " " + this.location + " " + this.countSits;
+        return  id + " " + this.name + " " + this.location + " " + this.countSits + " " + this.seances + " " + this.halls;
     }
 
-    public boolean equals(Object o) {
-        // TODO: done as User
-        if (o instanceof Cinema && o != null) {
-            Cinema that = (Cinema)o;
-            return this.name.equals(that.name) &&
-                    this.countSits == that.countSits && this.location == that.location;
-        } else return false;
+    public boolean equals(Object object) {
+        if (this == object) {
+            return true;
+        } else if (object == null || !(object instanceof Cinema)) {
+            return false;
+        } else {
+            Cinema that = (Cinema) object;
+            return this.id == that.id &&
+                    this.name.equals(that.name) &&
+                    this.location.equals(that.location) &&
+                    this.countSits == that.countSits &&
+                    this.seances.equals(that.seances) &&
+                    this.halls.equals(that.halls);
+
+        }
     }
 }
