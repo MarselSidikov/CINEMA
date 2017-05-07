@@ -1,7 +1,6 @@
 package models;
 
 import java.net.URL;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -107,7 +106,7 @@ public class Film {
                     && this.name.equals(that.name)
                     && this.duration == that.duration
                     && this.rating == that.rating
-                    && this.actors.containsAll(that.actors)
+                    && this.actors.equals(that.actors)
                     && this.poster.equals(that.poster)
                     && this.is3D == that.is3D;
 
