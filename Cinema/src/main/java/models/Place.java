@@ -15,6 +15,8 @@ public class Place {
     private List<Integer> listOfPlaces;
 
     public Place() {
+        this.hall = null;
+        this.listOfPlaces = null;
     }
 
     public Place(Hall hall, List<Integer> listOfPlaces) {
@@ -47,11 +49,17 @@ public class Place {
 
     @Override
     public boolean equals(Object obj) {
-        // TODO: as user make
-        if (obj != null && obj instanceof Place) {
+        if (this == obj) {
+            return true;
+        } else if (obj == null || !(obj instanceof Place)) {
+            return false;
+        } else {
             Place that = (Place) obj;
             return this.hall.equals(that.hall) &&
-                    this.listOfPlaces == that.listOfPlaces;
-        } else return false;
+                    this.listOfPlaces.equals(that.listOfPlaces);
+        }
     }
 }
+
+
+
