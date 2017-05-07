@@ -97,18 +97,21 @@ public class Film {
     }
 
     public boolean equals(Object object) {
-        // TODO: doing as User-equals, and fields equals
-        if (!(object instanceof Film)) {
+        if (this == object) {
+            return true;
+        } else if (object == null || !(object instanceof Film)) {
             return false;
+        } else {
+            Film that = (Film) object;
+            return this.id == that.id
+                    && this.name.equals(that.name)
+                    && this.duration == that.duration
+                    && this.rating == that.rating
+                    && this.actors.containsAll(that.actors)
+                    && this.poster.equals(that.poster)
+                    && this.is3D == that.is3D;
+
         }
-        Film that = (Film) object;
-        return this.getId() == that.getId()
-                && this.getName().equals(that.getName())
-                && this.getDuration() == that.getDuration()
-                && this.getRating() == that.getRating()
-                && this.getActors().equals(that.getActors())
-                && this.getPoster().equals(that.getPoster())
-                && this.is3D == that.is3D;
     }
 
     @Override
