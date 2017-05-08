@@ -15,6 +15,9 @@ public class Hall {
     private List<Place> places;
 
     public Hall() {
+        this.id = 0;
+        this.cinema = null;
+        this.places = null;
     }
 
     public Hall(int id, Cinema cinema, List<Place> places) {
@@ -49,8 +52,19 @@ public class Hall {
 
     @Override
     public String toString() {
-        return id + " " + this.cinema + " " + this.places;
+        return this.id + " " + this.cinema + " " + this.places;
     }
 
-    // TODO: equals
+    public boolean equals(Object object) {
+        if (this == object) {
+            return true;
+        } else if (object == null || !(object instanceof User)) {
+            return false;
+        } else {
+            Hall that = (Hall) object;
+            return this.id == that.id
+                    && this.cinema.equals(that.cinema)
+                    & that.places.equals(that.places);
+        }
+    }
 }
