@@ -1,18 +1,10 @@
-import models.Hall;
-import models.Place;
-import models.Seance;
-import models.User;
+import dao.BaseDao;
+import models.*;
 
 import java.util.List;
 
-public interface TicketDao {
+public interface TicketDao extends BaseDao<Ticket> {
 
-    void assignId();
 
-     void writeSeance(Seance seance);
-
-      List<Place>writePlace(Hall hall);
-
-     void giveToTheUser(User user);
 
 }
