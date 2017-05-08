@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * 03.05.2017
- * service.CinemaService
+ * CinemaService
  *
  * @author Guzel
  * @version v1.0
