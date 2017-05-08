@@ -1,0 +1,3 @@
+CREATE TABLE actor (
+  id SERIAL PRIMARY KEY,
+)

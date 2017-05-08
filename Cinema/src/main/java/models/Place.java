@@ -11,40 +11,35 @@ import java.util.List;
  */
 public class Place {
 
+    private int id;
     private Hall hall;
-    private List<Integer> listOfPlaces;
+    private int placeNumber;
 
     public Place() {
         this.hall = null;
-        this.listOfPlaces = null;
-    }
-
-    public Place(Hall hall, List<Integer> listOfPlaces) {
-        this.hall = hall;
-        this.listOfPlaces = listOfPlaces;
+        this.placeNumber = 0;
     }
 
     public Hall getHall() {
         return hall;
     }
 
+    public int getPlaceNumber() {
+        return placeNumber;
+    }
+
     public void setHall(Hall hall) {
         this.hall = hall;
     }
 
-    public List<Integer> getListOfPlaces() {
-        return listOfPlaces;
-    }
-
-    public void setListOfPlaces(List<Integer> listOfPlaces) {
-        this.listOfPlaces = listOfPlaces;
+    public void setPlaceNumber(int placeNumber) {
+        this.placeNumber = placeNumber;
     }
 
     @Override
     public String toString() {
         return hall + " " +
-                listOfPlaces;
-
+                placeNumber;
     }
 
     @Override
@@ -56,7 +51,7 @@ public class Place {
         } else {
             Place that = (Place) obj;
             return this.hall.equals(that.hall) &&
-                    this.listOfPlaces.equals(that.listOfPlaces);
+                    this.placeNumber == that.placeNumber;
         }
     }
 }

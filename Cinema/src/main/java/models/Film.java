@@ -15,7 +15,7 @@ public class Film {
     private String name;
     private int duration;
     private double rating;
-    private List<String> actors;
+    private List<Actor> actors;
     private URL poster;
     private boolean is3D;
 
@@ -29,7 +29,7 @@ public class Film {
         this.is3D = false;
     }
 
-    public Film(int id, String name, int duration, int rating, List<String> actors, URL poster, boolean is3D) {
+    public Film(int id, String name, int duration, int rating, List<Actor> actors, URL poster, boolean is3D) {
         this.id = id;
         this.name = name;
         this.duration = duration;
@@ -71,11 +71,11 @@ public class Film {
         this.rating = rating;
     }
 
-    public List<String> getActors() {
+    public List<Actor> getActors() {
         return actors;
     }
 
-    public void setActors(List<String> actors) {
+    public void setActors(List<Actor> actors) {
         this.actors = actors;
     }
 

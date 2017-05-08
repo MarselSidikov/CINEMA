@@ -1,0 +1,3 @@
+CREATE TABLE hall (
+  id SERIAL PRIMARY KEY,
+);

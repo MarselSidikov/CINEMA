@@ -1,0 +1,3 @@
+CREATE TABLE film (
+  id SERIAL PRIMARY KEY,
+);

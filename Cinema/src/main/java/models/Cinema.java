@@ -15,7 +15,6 @@ public class Cinema {
     private String location;
     private int countSits;
     private List<Seance> seances;
-    private List<Hall> halls;
 
     public Cinema() {
         this.id = 0;
@@ -26,13 +25,12 @@ public class Cinema {
         this.seances = null;
     }
 
-    public Cinema(int id, String name, String location, int countSits, List<Seance> seances, List<Hall> halls) {
+    public Cinema(int id, String name, String location, int countSits, List<Seance> seances) {
         this.id = id;
         this.name = name;
         this.location = location;
         this.countSits = countSits;
         this.seances = seances;
-        this.halls = halls;
     }
 
     public int getId() {
@@ -75,18 +73,10 @@ public class Cinema {
         this.seances = seances;
     }
 
-    public List<Hall> getHalls() {
-        return halls;
-    }
-
-    public void setHalls(List<Hall> halls) {
-        this.halls = halls;
-    }
-
     @Override
     public String toString() {
         // TODO: done
-        return  id + " " + this.name + " " + this.location + " " + this.countSits + " " + this.seances + " " + this.halls;
+        return  id + " " + this.name + " " + this.location + " " + this.countSits + " " + this.seances;
     }
 
     public boolean equals(Object object) {
@@ -100,8 +90,7 @@ public class Cinema {
                     this.name.equals(that.name) &&
                     this.location.equals(that.location) &&
                     this.countSits == that.countSits &&
-                    this.seances.equals(that.seances) &&
-                    this.halls.equals(that.halls);
+                    this.seances.equals(that.seances);
 
         }
     }

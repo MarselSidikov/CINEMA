@@ -1,0 +1,4 @@
+CREATE TABLE cinema (
+  id SERIAL PRIMARY KEY,
+
+);
