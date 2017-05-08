@@ -1,10 +1,12 @@
 package models;
 
+import java.util.List;
+
 /**
  * 03.05.2017
  * Cinema
  *
- * @author Sidikov Marsel (First Software Engineering Platform)
+ * @author Marat Shigabutdinov (ITIS)
  * @version v1.0
  */
 public class Cinema {
@@ -12,32 +14,27 @@ public class Cinema {
     private String name;
     private String location;
     private int countSits;
+    private List<Seance> seances;
+    private List<Hall> halls;
 
-    public Seance getSeance() {
-        return seance;
+    public Cinema() {
+        this.id = 0;
+        this.name = null;
+        this.location = null;
+        this.countSits = 0;
+        this.seances = null;
+        this.seances = null;
     }
 
-    public void setSeance(Seance seance) {
-        this.seance = seance;
-    }
-
-    public Hall getHall() {
-        return hall;
-    }
-
-    public void setHall(Hall hall) {
-        this.hall = hall;
-    }
-
-    private Seance seance;
-    private Hall hall;
-
-    public Cinema(int id, String name, String location, int countSits) {
+    public Cinema(int id, String name, String location, int countSits, List<Seance> seances, List<Hall> halls) {
         this.id = id;
         this.name = name;
         this.location = location;
         this.countSits = countSits;
+        this.seances = seances;
+        this.halls = halls;
     }
+
     public int getId() {
         return id;
     }
@@ -70,17 +67,42 @@ public class Cinema {
         this.countSits = countSits;
     }
 
+    public List<Seance> getSeances() {
+        return seances;
+    }
 
+    public void setSeances(List<Seance> seances) {
+        this.seances = seances;
+    }
+
+    public List<Hall> getHalls() {
+        return halls;
+    }
+
+    public void setHalls(List<Hall> halls) {
+        this.halls = halls;
+    }
 
     @Override
     public String toString() {
-        return  id + " " + this.name + " " + this.location + " " + this.countSits;
+        // TODO: done
+        return  id + " " + this.name + " " + this.location + " " + this.countSits + " " + this.seances + " " + this.halls;
     }
-    public boolean equals(Object o) {
-        if (o instanceof Cinema && o != null) {
-            Cinema that = (Cinema)o;
-            return this.name.equals(that.name) &&
-                    this.countSits == that.countSits && this.location == that.location;
-        } else return false;
+
+    public boolean equals(Object object) {
+        if (this == object) {
+            return true;
+        } else if (object == null || !(object instanceof Cinema)) {
+            return false;
+        } else {
+            Cinema that = (Cinema) object;
+            return this.id == that.id &&
+                    this.name.equals(that.name) &&
+                    this.location.equals(that.location) &&
+                    this.countSits == that.countSits &&
+                    this.seances.equals(that.seances) &&
+                    this.halls.equals(that.halls);
+
+        }
     }
 }

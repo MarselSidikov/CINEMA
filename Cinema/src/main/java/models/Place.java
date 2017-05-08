@@ -6,24 +6,23 @@ import java.util.List;
  * 03.05.2017
  * Place
  *
- * @author Guzel
+ * @author Guzel Musina (ITIS)
  * @version v1.0
  */
 public class Place {
 
-    Hall hall;
-    List<Integer> listOfPlaces;
+    private Hall hall;
+    private List<Integer> listOfPlaces;
+
+    public Place() {
+        this.hall = null;
+        this.listOfPlaces = null;
+    }
 
     public Place(Hall hall, List<Integer> listOfPlaces) {
         this.hall = hall;
         this.listOfPlaces = listOfPlaces;
     }
-
-    public Place() {
-    }
-
-    ;
-
 
     public Hall getHall() {
         return hall;
@@ -50,10 +49,17 @@ public class Place {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj != null && obj instanceof Place) {
+        if (this == obj) {
+            return true;
+        } else if (obj == null || !(obj instanceof Place)) {
+            return false;
+        } else {
             Place that = (Place) obj;
             return this.hall.equals(that.hall) &&
-                    this.listOfPlaces == that.listOfPlaces;
-        } else return false;
+                    this.listOfPlaces.equals(that.listOfPlaces);
+        }
     }
 }
+
+
+
