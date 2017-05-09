@@ -18,18 +18,34 @@ public class Place {
     public Place() {
         this.hall = null;
         this.placeNumber = 0;
+        this.id = 0;
+    }
+
+    public Place(int id, Hall hall, int placeNumber) {
+        this.id = id;
+        this.hall = hall;
+        this.placeNumber = placeNumber;
+    }
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Hall getHall() {
         return hall;
     }
 
-    public int getPlaceNumber() {
-        return placeNumber;
-    }
-
     public void setHall(Hall hall) {
         this.hall = hall;
+    }
+
+    public int getPlaceNumber() {
+        return placeNumber;
     }
 
     public void setPlaceNumber(int placeNumber) {
@@ -38,7 +54,7 @@ public class Place {
 
     @Override
     public String toString() {
-        return hall + " " +
+        return id + " " + hall + " " +
                 placeNumber;
     }
 
@@ -50,7 +66,7 @@ public class Place {
             return false;
         } else {
             Place that = (Place) obj;
-            return this.hall.equals(that.hall) &&
+            return this.id == that.id && this.hall.equals(that.hall) &&
                     this.placeNumber == that.placeNumber;
         }
     }
