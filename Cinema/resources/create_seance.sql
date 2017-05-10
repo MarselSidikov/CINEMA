@@ -4,5 +4,5 @@ CREATE TABLE seance (
   hall_id INTEGER REFERENCES hall(id),
   film_id INTEGER REFERENCES film(id),
   time DATE,
-
+  price INTEGER
 );
