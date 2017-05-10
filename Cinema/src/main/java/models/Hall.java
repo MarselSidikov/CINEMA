@@ -12,13 +12,15 @@ import java.util.List;
 public class Hall {
     private int id;
     private List<Place> places;
+    private int hall_Number;
 
     public Hall() {
         this.id = 0;
         this.places = null;
+        this.hall_Number = 0;
     }
 
-    public Hall(int id, List<Place> places) {
+    public Hall(int id, List<Place> places, int hall_Number) {
         this.id = id;
         this.places = places;
     }
@@ -39,9 +41,18 @@ public class Hall {
         this.places = places;
     }
 
+    public int getHall_Number() {
+        return hall_Number;
+    }
+
+    public void setHall_Number(int hall_Number) {
+        this.hall_Number = hall_Number;
+    }
+
+
     @Override
     public String toString() {
-        return this.id + " " + this.places;
+        return this.id + " " + this.places + " " + this.hall_Number;
     }
 
     public boolean equals(Object object) {
@@ -51,8 +62,11 @@ public class Hall {
             return false;
         } else {
             Hall that = (Hall)object;
+
             return this.id == that.id
-                    && this.places.equals(that.places);
+                    && this.places.equals(that.places)
+                     && this.hall_Number == that.hall_Number;
         }
     }
+
 }
