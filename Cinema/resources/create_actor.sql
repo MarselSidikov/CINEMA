@@ -3,4 +3,4 @@ CREATE TABLE actor (
   firstName VARCHAR (20),
   lastName VARCHAR (20),
   age INTEGER
-)
+);
