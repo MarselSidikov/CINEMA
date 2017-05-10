@@ -1,3 +1,4 @@
 CREATE TABLE hall (
   id SERIAL PRIMARY KEY
+  hall_id INTEGER REFERENCES hall(id)
 );
