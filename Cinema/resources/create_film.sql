@@ -1,3 +1,8 @@
 CREATE TABLE film (
   id SERIAL PRIMARY KEY,
+  name VARCHAR (20),
+  duration INTEGER,
+  rating DOUBLE PRECISION,
+  poster VARCHAR(100),
+  is3D BOOLEAN
 );

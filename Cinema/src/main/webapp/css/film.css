@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 10pt Arial, Helvetica, sans-serif; /* Шрифт на веб-странице */
+    background: linear-gradient(-45deg, #3b773a, #85b185); /* Цвет фона */
+    margin: 0; /* Убираем отступы */
+}
+h2 {
+    font-size: 1.1em; /* Размер шрифта */
+    color: #752641; /* Цвет текста */
+    margin-bottom: 0; /* Отступ снизу */
+}
+#container {
+    width: 70%;
+    height: 940px;
+    margin: 30px auto; /* Выравниваем по центру */
+    background: #f0f0f0; /* Цвет фона правой колонки */
+    box-shadow: 8px 7px 13px 2px rgba(0,0,0,0.5);; /* Параметры тени */
+    padding: 0;
+}
+#header {
+    background: #101010; /* Цвет фона */
+    font-size: 25pt; /* Размер текста */
+    font-weight: bold; /* Жирное начертание */
+    color: #edeed5; /* Цвет текста */
+    padding: 6px; /* Отступы вокруг текста */
+}
+#img {
+    float: left; /* Обтекание по правому краю */
+    width: 210px; /* Ширина левой колонки */
+    padding: 10px; /* Поля вокруг текста */
+    background: #fff; /* Цвет фона левой колонки */
+}
+#img p {
+    margin-top: 0.3em /* Отступ сверху */
+}
+#info {
+    float: left;
+    margin-top: 0;
+    margin-right: 10px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    border-collapse: collapse;
+    color: #686461;
+    border: 2px black dashed;
+}
+caption {
+    padding: 10px;
+    color: white;
+    background: #8FD4C1;
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+}
+th {
+    border-bottom: 3px solid #B9B29F;
+    padding: 10px;
+    text-align: left;
+}
+td {
+    padding: 10px;
+}
+tr:nth-child(odd) {
+    background: white;
+}
+tr:nth-child(even) {
+    background: #E8E6D1;
+}
+#actors {
+    float: right; /* Обтекание по правому краю */
+    width: 160px; /* Ширина */
+    padding: 5px; /* Отступы вокруг текста */
+    font-size: 11pt;
+}
+#description {
+    background: #8FD4C1; /* Цвет фона */
+    color: black; /* Цвет текста */
+    margin: 10px;
+    padding: 10px; /* Отступы вокруг текста */
+    font-size: 16px;
+    text-align: left;
+    width: 540px;
+    height: 120px;
+}
+iframe{
+    padding-left: 10px;
+}
+.clear {
+    clear: both; /* Отмена обтекания */
+}
