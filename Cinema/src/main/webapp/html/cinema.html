@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/cinema.css">
+    <meta charset="utf-8">
+    <title>Кинотеатры</title>
+    <style
+         type="text/css">
+        TABLE {
+            background: white; /* Цвет фона таблицы */
+            color: white; /* Цвет текста */
+        }
+        TD, TH {
+            background: maroon; /* Цвет фона ячеек */
+            padding: 5px; /* Поля вокруг текста */
+        }
+        body {
+            background: #c7b39b url(images/bg.jpg); /* Цвет фона и путь к файлу */
+            color: #fff; /* Цвет текста */
+        }
+    </style>
+</head>
+<body>
+<h1>Кинотеатры</h1>
+
+<table border="2">
+    <tr>
+        <td><img src="http://files.geometria.ru/pics/original/035/108/35108643.jpg" height="150" width="250" align="left"></td>
+        <td>Сеть кинотеатров Киномакс предоставляет всем жителям и гостям города Казань возможность просмотра кино в кинозалах,
+            оснащенных новейшим оборудованием, которое позволит смотреть новинки...</td>
+        <td><form method="POST" action="/order-lables-print">
+            <input type="hidden" name="product_id" value="<?php echo $row->product_id; ?>"/>
+            <input type="submit" value="Подробнее"/>
+        </form></td>
+        <td><iframe src="https://api-maps.yandex.ru/frame/v1/-/C6rdNIJh" width="560" height="400" frameborder="0" height="150" width="250"></iframe></td>
+    </tr>
+</table>
+<table border="2">
+    <tr>
+        <td><img src="http://test.atoms.ru/imgs/kinomaxkazan1.jpg" height="150" width="250" align="left"></td>
+        <td>Сеть кинотеатров Киномакс предоставляет всем жителям и гостям города Казань возможность просмотра кино в кинозалах,
+            оснащенных новейшим оборудованием, которое позволит смотреть новинки...</td>
+        <td><form method="POST" action="/order-lables-print">
+            <input type="hidden" name="product_id" value="<?php echo $row->product_id; ?>"/>
+            <input type="submit" value="Подробнее"/>
+        </form></td>
+        <td><<iframe src="https://api-maps.yandex.ru/frame/v1/-/C6rdNIJh" width="560" height="400" frameborder="0" height="150" width="250"></iframe></td>
+    </tr>
+</table>
+<table border="2">
+    <tr>
+        <td><img src="http://test.atoms.ru/imgs/kinomaxkazan1.jpg" height="150" width="250" align="left"></td>
+        <td>Сеть кинотеатров Киномакс предоставляет всем жителям и гостям города Казань возможность просмотра кино в кинозалах,
+            оснащенных новейшим оборудованием, которое позволит смотреть новинки...</td>
+        <td><form method="POST" action="/order-lables-print">
+            <input type="hidden" name="product_id" value="<?php echo $row->product_id; ?>"/>
+            <input type="submit" value="Подробнее"/>
+        </form></td>
+        <td><<iframe src="https://api-maps.yandex.ru/frame/v1/-/C6rdNIJh" width="560" height="400" frameborder="0" height="150" width="250"></iframe></td>
+    </tr>
+</table>
+</body>
+
+
+
+
+
