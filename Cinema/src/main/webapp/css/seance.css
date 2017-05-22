@@ -1,0 +1,107 @@
+
+.jpg{
+    width: 137px;
+    height: 155px;
+    margin-left: 191px;
+}
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+    margin-left: 191px;
+}
+.film-name {
+    font-size: 18px;
+    position:  fixed; left: 350px; top: 115px;
+}
+.genre {
+    font-size: 13px;
+    position:  fixed; left: 350px; top: 121px;
+}
+.cinema-name1{
+    margin-left: 191px;
+    position:  fixed; top: 300px;
+}
+.cinema-name2{
+    margin-left: 191px;
+    position:  fixed; top: 400px;
+}
+.cinema-name3{
+    margin-left: 191px;
+    position:  fixed; top: 500px;
+}
+.format1{
+    margin-left: 437px;
+    position:  fixed; top: 290px;
+}
+.format2{
+    margin-left: 437px;
+    position:  fixed; top: 390px;
+}
+.format3{
+    margin-left: 437px;
+    position:  fixed; top: 490px;
+
+}
+.button{
+    background: #272e2e;
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px;
+    font-size: 20px;
+}
+.button1{
+    position:  fixed; left: 440px; top: 330px;
+}
+.button2{
+    position:  fixed; left: 540px; top: 330px;
+}
+.button3{
+    position:  fixed; left: 640px; top: 330px;
+}
+.button4{
+    position:  fixed; left: 440px; top: 430px;
+}
+.button5{
+    position:  fixed; left: 540px; top: 430px;
+}
+.button6{
+    position:  fixed; left: 640px; top: 430px;
+}
+.button7{
+    position:  fixed; left: 440px; top: 530px;
+}
+.button8{
+    position:  fixed; left: 540px; top: 530px;
+}
+.button9{
+    position:  fixed; left: 640px; top: 530px;
+}
+.price1{
+    position:  fixed; left: 450px; top: 335px;
+}
+.price2{
+    position:  fixed; left: 550px; top: 335px;
+}
+.price3{
+    position:  fixed; left: 650px; top: 335px;
+}
+.price4{
+    position:  fixed; left: 450px; top: 435px;
+}
+.price5{
+    position:  fixed; left: 550px; top: 435px;
+}
+.price6{
+    position:  fixed; left: 650px; top: 435px;
+}
+.price7{
+    position:  fixed; left: 450px; top: 535px;
+}
+.price8{
+    position:  fixed; left: 550px; top: 535px;
+}
+.price9{
+    position:  fixed; left: 650px; top: 535px;
+}
