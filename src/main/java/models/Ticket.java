@@ -2,8 +2,6 @@ package models;
 
 import java.util.List;
 
-import java.util.List;
-
 /**
  * 03.05.2017
  * Ticket

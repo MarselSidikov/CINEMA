@@ -2,8 +2,6 @@ package dao;
 
 import models.*;
 
-import java.util.List;
-
 /**
  * 07.05.2017
  * PlaceDao

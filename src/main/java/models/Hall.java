@@ -12,15 +12,15 @@ import java.util.List;
 public class Hall {
     private int id;
     private List<Place> places;
-    private int hall_Number;
+    private int hallNumber;
 
     public Hall() {
         this.id = 0;
         this.places = null;
-        this.hall_Number = 0;
+        this.hallNumber = 0;
     }
 
-    public Hall(int id, List<Place> places, int hall_Number) {
+    public Hall(int id, List<Place> places, int hallNumber) {
         this.id = id;
         this.places = places;
     }
@@ -41,18 +41,18 @@ public class Hall {
         this.places = places;
     }
 
-    public int getHall_Number() {
-        return hall_Number;
+    public int getHallNumber() {
+        return hallNumber;
     }
 
-    public void setHall_Number(int hall_Number) {
-        this.hall_Number = hall_Number;
+    public void setHallNumber(int hallNumber) {
+        this.hallNumber = hallNumber;
     }
 
 
     @Override
     public String toString() {
-        return this.id + " " + this.places + " " + this.hall_Number;
+        return this.id + " " + this.places + " " + this.hallNumber;
     }
 
     public boolean equals(Object object) {
@@ -65,7 +65,7 @@ public class Hall {
 
             return this.id == that.id
                     && this.places.equals(that.places)
-                     && this.hall_Number == that.hall_Number;
+                     && this.hallNumber == that.hallNumber;
         }
     }
 
