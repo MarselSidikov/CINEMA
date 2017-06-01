@@ -1,5 +1,7 @@
 package ru.itis.models;
 
+import javax.persistence.*;
+
 /**
  * 08.05.2017
  * Actor
@@ -7,10 +9,21 @@ package ru.itis.models;
  * @author Veronika Sotskova (First Software Engineering Platform)
  * @version v1.0
  */
+@Entity
+@Table(name = "actor")
 public class Actor {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column(name = "firstname")
     private String firstName;
+
+    @Column(name = "lastname")
     private String lastName;
+
+    @Column(name = "age")
     private int age;
 
     public Actor() {

@@ -1,5 +1,6 @@
 package ru.itis.models;
 
+import javax.persistence.*;
 import java.net.URL;
 import java.util.List;
 
@@ -10,14 +11,40 @@ import java.util.List;
  * @author Veronika Sotskova (ITIS)
  * @version v1.0
  */
+@Entity
+@Table(name = "film")
 public class Film {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column
     private String name;
+    @Column
     private int duration;
+    @Column
     private double rating;
+
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "actor_film",
+            joinColumns = {
+            @JoinColumn(name = "film_id") },
+            inverseJoinColumns = {
+            @JoinColumn(name = "actor_id")})
     private List<Actor> actors;
-    private URL poster;
+
+    @Column
+    private String poster;
+
+    @Column(name = "is3d")
     private boolean is3D;
+
+    @Column
+    private String trailer;
+
+    @Column
+    private String description;
 
     public Film() {
         this.id = 0;
@@ -27,9 +54,11 @@ public class Film {
         this.actors = null;
         this.poster = null;
         this.is3D = false;
+        this.trailer = null;
+        this.description = null;
     }
 
-    public Film(int id, String name, int duration, int rating, List<Actor> actors, URL poster, boolean is3D) {
+    public Film(int id, String name, int duration, double rating, List<Actor> actors, String poster, boolean is3D, String trailer, String description) {
         this.id = id;
         this.name = name;
         this.duration = duration;
@@ -37,6 +66,8 @@ public class Film {
         this.actors = actors;
         this.poster = poster;
         this.is3D = is3D;
+        this.trailer = trailer;
+        this.description = description;
     }
 
     public int getId() {
@@ -79,20 +110,36 @@ public class Film {
         this.actors = actors;
     }
 
-    public URL getPoster() {
+    public String getPoster() {
         return poster;
     }
 
-    public void setPoster(URL poster) {
+    public void setPoster(String poster) {
         this.poster = poster;
     }
 
-    public boolean is3D() {
+    public boolean getIs3D() {
         return is3D;
     }
 
     public void setIs3D(boolean is3D) {
         this.is3D = is3D;
+    }
+
+    public String getTrailer() {
+        return trailer;
+    }
+
+    public void setTrailer(String trailer) {
+        this.trailer = trailer;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public boolean equals(Object object) {
