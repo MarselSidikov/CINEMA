@@ -1,6 +1,6 @@
-package dao;
+package ru.itis.dao;
 
-import models.Seance;
+import ru.itis.models.Seance;
 
 /**
  * 07.05.2017

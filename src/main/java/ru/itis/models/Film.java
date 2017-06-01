@@ -1,4 +1,4 @@
-package models;
+package ru.itis.models;
 
 import java.net.URL;
 import java.util.List;
