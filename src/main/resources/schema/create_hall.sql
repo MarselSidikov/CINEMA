@@ -1,4 +1,4 @@
 CREATE TABLE hall (
-  id SERIAL PRIMARY KEY
+  id SERIAL PRIMARY KEY,
   hall_number INTEGER
 );
