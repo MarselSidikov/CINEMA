@@ -12,6 +12,8 @@ import ru.itis.models.Film;
 
 import java.util.List;
 
+import static javax.swing.text.StyleConstants.ModelAttribute;
+
 @Controller
 public class FilmsController {
 
