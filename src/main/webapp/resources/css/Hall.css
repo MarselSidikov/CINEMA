@@ -1,17 +1,18 @@
 @charset "utf-8";
 *{
+    font-family: "Arial";
     margin: 0;
     padding: 0;
     outline: snow;
 }
 body{
     margin: auto;
-    background: yellow;
+    background: green;
     width: 100%;
     height: 100%;
     color: #333;
     font-size: 1em;
-    font-family: "Segoe UI", sans-serif;
+    font-family: "Arial", sans-serif;
     line-height: 135%;
     background: linear-gradient(-45deg, #3b773a, #85b185);
 }
@@ -63,11 +64,11 @@ img{
 }
 #logo{
     font-size: 2em;
-    font-family: "Comic Sans MS", sans-serif ;
+    font-family: "Arial", sans-serif ;
     margin-left: auto;
 }
 .contact {
-    font-family: "Comic Sans MS", sans-serif;
+    font-family: "Arial", sans-serif;
     font-size: 1.5em;
     maragin-left: 40px;
     margin: inherit;
@@ -91,15 +92,15 @@ input[type=text].field{
 }
 .svgtext{
     font-size: 1em;
-    font-family: "Comic Sans MS", sans-serif;
+    font-family: "Arial", sans-serif;
 }
 h1{
-    font-family: "Comic Sans MS", sans-serif;
+    font-family: "Arial", sans-serif;
     margin-left: 830px;
     margin-top: 20px;
 }
 #button {
-    font-family: "Comic Sans MS", sans-serif;
+    font-family: "Arial", sans-serif;
     margin-left: 7px;
     font-size: 1em;
     margin-top: auto;
@@ -114,7 +115,7 @@ h1{
 
 #ggg{
     margin-left: 10px;
-    font-family: "Comic Sans MS", sans-serif ;
+    font-family: "Arial", sans-serif ;
     font-size:1.7em ;
 }
 .svgrect:hover{
@@ -128,9 +129,9 @@ h1{
 }
 #svgtext{
     font-size: 1em;
-    font-family: "Comic Sans MS", sans-serif;
+    font-family: "Arial", sans-serif;
 }
 #svgtext2 {
     font-size: 1em;
-    font-family: "Comic Sans MS", sans-serif;
+    font-family: "Arial", sans-serif;
 }
