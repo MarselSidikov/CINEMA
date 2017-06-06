@@ -1,6 +1,6 @@
-package dao;
+package ru.itis.dao;
 
-import models.Hall;
+import ru.itis.models.Hall;
 
 /**
  * 07.05.2017

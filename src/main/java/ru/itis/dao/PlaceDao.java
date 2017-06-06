@@ -1,6 +1,6 @@
-package dao;
+package ru.itis.dao;
 
-import models.Place;
+import ru.itis.models.Place;
 
 /**
  * 07.05.2017
