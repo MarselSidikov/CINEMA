@@ -4,61 +4,125 @@
     <link rel="stylesheet" type="text/css" href="../css/cinema.css">
     <meta charset="utf-8">
     <title>Кинотеатры</title>
-    <style
-         type="text/css">
-        TABLE {
-            background: white; /* Цвет фона таблицы */
-            color: white; /* Цвет текста */
-        }
-        TD, TH {
-            background: maroon; /* Цвет фона ячеек */
-            padding: 5px; /* Поля вокруг текста */
-        }
-        body {
-            background: #c7b39b url(images/bg.jpg); /* Цвет фона и путь к файлу */
-            color: #fff; /* Цвет текста */
-        }
+    <style>
+            .bulletsBlock:after {
+            content: "";
+    display: table;
+    clear: both;
+    }
+
+    .bulletsBlock > div {
+    width: 30%;
+    float: left;
+    background: rgba(0,0,0,0.3);
+    margin-left:5%;
+    text-align: center;
+    position: relative;
+    padding-bottom: 31.7%;
+    cursor: pointer;
+    -webkit-transition:all 0.35s linear;
+    transition:all 0.35s linear;
+    }
+
+    .bulletsBlock > div:first-child {
+    margin-left:0;
+    }
+
+    /*Тень снизу у блока при наведении*/
+    .bulletsBlock > div:hover {
+    -webkit-box-shadow: 0 35px 35px -35px #000000;
+    -moz-box-shadow: 0 35px 35px -35px #000000;
+    box-shadow: 0 35px 35px -35px #000000;
+    }
+            .bullet-item span{
+                line-height: 1.5em;
+                font-size: 12.5em;
+                color:#fff;
+                position: absolute;
+                top:0;
+                left:0;
+                display: block;
+                width: 100%;
+                -webkit-transition:all 0.35s ease;
+                transition:all 0.35s ease;
+            }
+
+            /*Анимация иконки при наведении - уменьшение и сдвиг вверх*/
+            .bulletsBlock > div:hover span.iconBullet{
+                line-height: 1.35em;
+                font-size: 10.625em;
+                top:-2.7%;
+            }
+            .titleBullet, .hideText {
+                position: absolute;
+                left:0;
+                bottom:0;
+                text-align: center;
+                width: 100%;
+                margin: 0;
+                color: #fff;
+                -webkit-transition:all 0.35s ease;
+                transition:all 0.35s ease;
+            }
+
+            .titleBullet {
+                line-height: 2.5em;
+                font-size: 2.1875em;
+                background:#3B3B3B;
+                z-index: 10;
+            }
+
+            .hideText {
+                line-height: 1.3em;
+                font-size: 1.25em;
+                padding: 1em 0;
+                background:#3B3B3B;
+                font-weight: 300;
+                z-index: 8;
+                height: 50px;
+                -webkit-transition:all 0.35s linear 0.2s;
+                transition:all 0.35s linear 0.2s;
+            }
+
+            /*Анимация при наведении видимого текстового блока*/
+            .bulletsBlock > div:hover p.titleBullet{
+                bottom:80px;
+            }
+
+            /*Анимация при наведении скрытого текстового блока*/
+            .bulletsBlock > div:hover p.hideText{
+                background:#454545;
+            }
+            body {
+                font: 10pt Arial, Helvetica, sans-serif; /* Шрифт на веб-странице */
+                background: linear-gradient(-45deg, #3b773a, #85b185); /* Цвет фона */
+                margin: 0; /* Убираем отступы */
+            }
+
     </style>
 </head>
 <body>
 <h1>Кинотеатры</h1>
+<body link="white" alink="#ff0000" vlink="#ffff00">
+<div class="bulletsBlock">
+    <div class="bullet-item">
+        <span><img src="http://files.geometria.ru/pics/original/035/108/35108643.jpg" height="390" width="405" align="left"></span>
+        <p class="titleBullet"><a href=" index.html">Cинема 1</a></p>
+        <p class="hideText">Описание<br>кинотеатра 1</p>
+    </div>
 
-<table border="2">
-    <tr>
-        <td><img src="http://files.geometria.ru/pics/original/035/108/35108643.jpg" height="150" width="250" align="left"></td>
-        <td>Сеть кинотеатров Киномакс предоставляет всем жителям и гостям города Казань возможность просмотра кино в кинозалах,
-            оснащенных новейшим оборудованием, которое позволит смотреть новинки...</td>
-        <td><form method="POST" action="/order-lables-print">
-            <input type="hidden" name="product_id" value="<?php echo $row->product_id; ?>"/>
-            <input type="submit" value="Подробнее"/>
-        </form></td>
-        <td><iframe src="https://api-maps.yandex.ru/frame/v1/-/C6rdNIJh" width="560" height="400" frameborder="0" height="150" width="250"></iframe></td>
-    </tr>
-</table>
-<table border="2">
-    <tr>
-        <td><img src="http://test.atoms.ru/imgs/kinomaxkazan1.jpg" height="150" width="250" align="left"></td>
-        <td>Сеть кинотеатров Киномакс предоставляет всем жителям и гостям города Казань возможность просмотра кино в кинозалах,
-            оснащенных новейшим оборудованием, которое позволит смотреть новинки...</td>
-        <td><form method="POST" action="/order-lables-print">
-            <input type="hidden" name="product_id" value="<?php echo $row->product_id; ?>"/>
-            <input type="submit" value="Подробнее"/>
-        </form></td>
-        <td><<iframe src="https://api-maps.yandex.ru/frame/v1/-/C6rdNIJh" width="560" height="400" frameborder="0" height="150" width="250"></iframe></td>
-    </tr>
-</table>
-<table border="2">
-    <tr>
-        <td><img src="http://test.atoms.ru/imgs/kinomaxkazan1.jpg" height="150" width="250" align="left"></td>
-        <td>Сеть кинотеатров Киномакс предоставляет всем жителям и гостям города Казань возможность просмотра кино в кинозалах,
-            оснащенных новейшим оборудованием, которое позволит смотреть новинки...</td>
-        <td><form method="POST" action="/order-lables-print">
-            <input type="hidden" name="product_id" value="<?php echo $row->product_id; ?>"/>
-            <input type="submit" value="Подробнее"/>
-        </form></td>
-        <td><<iframe src="https://api-maps.yandex.ru/frame/v1/-/C6rdNIJh" width="560" height="400" frameborder="0" height="150" width="250"></iframe></td>
-    </tr>
-</table>
+    <div class="bullet-item">
+        <span><img src="http://files.geometria.ru/pics/original/035/108/35108643.jpg" height="390" width="405" align="left"></span>
+        <p class="titleBullet"><a href=" index.html">Cинема 2</a></p>
+        <p class="hideText">Описание<br>кинотеатра 2</p>
+    </div>
+
+    <div class="bullet-item">
+        <span><img src="http://files.geometria.ru/pics/original/035/108/35108643.jpg" height="390" width="405" align="left"></span>
+        <p class="titleBullet"><a href=" index.html">Cинема 3</a></p>
+        <p class="hideText">Описание<br>кинотеатра 3</p>
+    </div>
+</div>
 </body>
 
 
