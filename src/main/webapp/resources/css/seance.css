@@ -1,107 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 10pt Arial, Helvetica, sans-serif; /* Шрифт на веб-странице */
+    background: #696969; /* Цвет фона */
+    margin: 0; /* Убираем отступы */
+}
+h2 {
+    font-size: 1.1em; /* Размер шрифта */
+    color: #752641; /* Цвет текста */
+    margin-bottom: 0; /* Отступ снизу */
+}
+#container {
+    width: 70%;
+    height: 940px;
+    margin: 30px auto; /* Выравниваем по центру */
+    background: #f0f0f0; /* Цвет фона правой колонки */
+    box-shadow: 8px 7px 13px 2px rgba(0,0,0,0.5);; /* Параметры тени */
+    padding: 0;
+}
+#header {
+    background: #DCDCDC; /* Цвет фона */
+    font-size: 25pt; /* Размер текста */
+    font-weight: bold; /* Жирное начертание */
+    color: #808080; /* Цвет текста */
+    padding: 6px; /* Отступы вокруг текста */
+}
+#cinema{
+    margin: 60px 30px 0px 30px;
+    background: #696969;
+    font-size: 15pt;
+    color: #FFFAFA;
+    padding: 6px;
 
-.jpg{
-    width: 137px;
-    height: 155px;
-    margin-left: 191px;
-}
-.page-header {
-    padding-bottom: 9px;
-    margin: 40px 0 20px;
-    border-bottom: 1px solid #eee;
-    margin-left: 191px;
-}
-.film-name {
-    font-size: 18px;
-    position:  fixed; left: 350px; top: 115px;
-}
-.genre {
-    font-size: 13px;
-    position:  fixed; left: 350px; top: 121px;
-}
-.cinema-name1{
-    margin-left: 191px;
-    position:  fixed; top: 300px;
-}
-.cinema-name2{
-    margin-left: 191px;
-    position:  fixed; top: 400px;
-}
-.cinema-name3{
-    margin-left: 191px;
-    position:  fixed; top: 500px;
-}
-.format1{
-    margin-left: 437px;
-    position:  fixed; top: 290px;
-}
-.format2{
-    margin-left: 437px;
-    position:  fixed; top: 390px;
-}
-.format3{
-    margin-left: 437px;
-    position:  fixed; top: 490px;
 
 }
-.button{
-    background: #272e2e;
-    width: 80px;
-    height: 40px;
+#img {
+    float: left; /* Обтекание по правому краю */
+    width: 210px; /* Ширина левой колонки */
+    padding: 10px; /* Поля вокруг текста */
+    background: #fff; /* Цвет фона левой колонки */
+}
+#img p {
+    margin-top: 0.3em /* Отступ сверху */
+}
+#info {
+    float: left;
+    margin-top: 0;
+    margin-right: 10px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+button{
+    background: #C0C0C0;
+    width: 60px;
+    height: 27px;
     border-radius: 5px;
     box-shadow: 0px 1px 3px;
-    font-size: 20px;
+    font-size: 14px;
+    margin-left: 64px;
 }
-.button1{
-    position:  fixed; left: 440px; top: 330px;
+.price-margin{
+    margin-left: 172px;
 }
-.button2{
-    position:  fixed; left: 540px; top: 330px;
+price{
+    margin-left: 93px;
+    font-size: 14px;
+    color:#C0C0C0;
 }
-.button3{
-    position:  fixed; left: 640px; top: 330px;
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande";
+    border-collapse: collapse;
+    color: #686461;
 }
-.button4{
-    position:  fixed; left: 440px; top: 430px;
+caption {
+    padding: 10px;
+    color: white;
+    background: #696969;
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
 }
-.button5{
-    position:  fixed; left: 540px; top: 430px;
+th {
+    border-bottom: 3px solid #B9B29F;
+    padding: 10px;
+    text-align: left;
 }
-.button6{
-    position:  fixed; left: 640px; top: 430px;
+td {
+    padding: 10px;
 }
-.button7{
-    position:  fixed; left: 440px; top: 530px;
+tr:nth-child(odd) {
+    background: white;
 }
-.button8{
-    position:  fixed; left: 540px; top: 530px;
+tr:nth-child(even) {
+    background: #E8E6D1;
 }
-.button9{
-    position:  fixed; left: 640px; top: 530px;
-}
-.price1{
-    position:  fixed; left: 450px; top: 335px;
-}
-.price2{
-    position:  fixed; left: 550px; top: 335px;
-}
-.price3{
-    position:  fixed; left: 650px; top: 335px;
-}
-.price4{
-    position:  fixed; left: 450px; top: 435px;
-}
-.price5{
-    position:  fixed; left: 550px; top: 435px;
-}
-.price6{
-    position:  fixed; left: 650px; top: 435px;
-}
-.price7{
-    position:  fixed; left: 450px; top: 535px;
-}
-.price8{
-    position:  fixed; left: 550px; top: 535px;
-}
-.price9{
-    position:  fixed; left: 650px; top: 535px;
+.clear {
+    clear: both; /* Отмена обтекания */
 }
