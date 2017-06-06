@@ -6,8 +6,7 @@ table {
 
 }
 body{
-    background-image: url("https://www.3secrets.ru/_ld/52/5279.jpg");
-    background-size: 1360px;
+    background: linear-gradient(-45deg, #3b773a, #85b185);
 
 }
 th{
