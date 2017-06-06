@@ -1,4 +1,4 @@
-package dao;
+package ru.itis.dao;
 
 import java.util.List;
 

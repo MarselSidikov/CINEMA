@@ -1,6 +1,6 @@
-package service;
+package ru.itis.service;
 
-import models.*;
+import ru.itis.models.*;
 
 import java.util.List;
 

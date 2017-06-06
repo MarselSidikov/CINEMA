@@ -1,6 +1,6 @@
-package dao;
+package ru.itis.dao;
 
-import models.Cinema;
+import ru.itis.models.Cinema;
 
 /**
  * 03.05.2017
